@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*        原理:利用两个三角形相互叠加,制造出框的效果;*/
+        
+        .square {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            position: relative;
+        }
+        
+        .trigle1 {
+            width: 0;
+            height: 0;
+            /*            上边框的投射*/
+            border-top: 30px solid transparent;
+            /*            下边框的投射*/
+            border-bottom: 20px solid transparent;
+            /*            左边框的投射*/
+            border-left: 30px solid #000;
+            position: absolute;
+            left: 200px;
+            top: 40px;
+        }
+        
+        .trigle2 {
+            width: 0;
+            height: 0;
+            border-top: 29px solid transparent;
+            border-bottom: 19px solid transparent;
+            border-left: 29px solid #fff;
+            position: absolute;
+            left: -31px;
+            top: -29px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square">
+        <div class="trigle1">
+            <div class="trigle2"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
